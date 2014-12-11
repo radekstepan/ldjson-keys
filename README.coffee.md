@@ -4,7 +4,7 @@ Pipe LDJSON in, get all of the keys found out.
 
 This is useful in conjunction with `maxogden/csv-write-stream` that reads CSV columns from first row/object only.
 
-![Build Status](http://img.shields.io/codeship/????????style=flat)
+![Build Status](http://img.shields.io/codeship/bf2e7930-638b-0132-0720-76d0773b13a7.svg?style=flat)
 [![Dependencies](http://img.shields.io/david/radekstepan/ldjson-keys.svg?style=flat)](https://david-dm.org/radekstepan/ldjson-keys)
 [![License](http://img.shields.io/badge/license-AGPL--3.0-red.svg?style=flat)](LICENSE)
 
