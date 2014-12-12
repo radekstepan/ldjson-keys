@@ -1,11 +1,12 @@
 {
   "name": "ldjson-keys",
   "description": "Pipe LDJSON in, get all of the keys found out",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Radek Stepan <radeks@redmantech.ca>",
   "license": "AGPL-3.0",
   "dependencies": {
     "coffee-script": "^1.8.0",
+    "hashtable": "^0.5.2",
     "highland": "^2.0.0",
     "ndjson": "^1.3.0"
   },

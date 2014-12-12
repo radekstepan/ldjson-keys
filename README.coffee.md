@@ -26,19 +26,20 @@ $ echo '{"col1":1}\n{"col2":2}' | ldjson-to-csv
 
 ##Source
 
-    _       = require 'highland'
-    ndjson  = require 'ndjson'
-    { EOL } = require 'os'
+    _         = require 'highland'
+    ndjson    = require 'ndjson'
+    { EOL }   = require 'os'
+    HashTable = require 'hashtable'
 
     module.exports = ->
-      keys = {}
+      keys = new HashTable()
 
       through = (obj) ->
         _ (push, next) ->
-          for k of obj when k not of keys
-            keys[k] = null
+          for k of obj when not keys.has k
+            keys.put k, null
             push null, k + EOL
-          push null, _.nil
+          do next
 
       _.pipeline.apply _, [
         do _
