@@ -39,7 +39,7 @@ $ echo '{"col1":1}\n{"col2":2}' | ldjson-to-csv
           for k of obj when not keys.has k
             keys.put k, null
             push null, k + EOL
-          do next
+          push null, _.nil
 
       _.pipeline.apply _, [
         do _
